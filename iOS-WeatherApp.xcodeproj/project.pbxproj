@@ -16,6 +16,7 @@
 		BE73AC8B26DE2FEB001F9048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE73AC8926DE2FEB001F9048 /* LaunchScreen.storyboard */; };
 		BE73AC9626DE2FEB001F9048 /* iOS_WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73AC9526DE2FEB001F9048 /* iOS_WeatherAppTests.swift */; };
 		BE73ACA126DE2FEC001F9048 /* iOS_WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73ACA026DE2FEC001F9048 /* iOS_WeatherAppUITests.swift */; };
+		BE8BBB8F26DF834300E19E3F /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BBB8E26DF834300E19E3F /* WeatherDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BE73AC9C26DE2FEC001F9048 /* iOS-WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-WeatherAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE73ACA026DE2FEC001F9048 /* iOS_WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_WeatherAppUITests.swift; sourceTree = "<group>"; };
 		BE73ACA226DE2FEC001F9048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE8BBB8E26DF834300E19E3F /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				BE73AC8926DE2FEB001F9048 /* LaunchScreen.storyboard */,
 				BE73AC8C26DE2FEB001F9048 /* Info.plist */,
 				BE73AC8426DE2FDE001F9048 /* iOS_WeatherApp.xcdatamodeld */,
+				BE8BBB8E26DF834300E19E3F /* WeatherDataManager.swift */,
 			);
 			path = "iOS-WeatherApp";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				BE73AC7C26DE2FDE001F9048 /* AppDelegate.swift in Sources */,
 				BE73AC8626DE2FDE001F9048 /* iOS_WeatherApp.xcdatamodeld in Sources */,
 				BE73AC7E26DE2FDE001F9048 /* SceneDelegate.swift in Sources */,
+				BE8BBB8F26DF834300E19E3F /* WeatherDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
