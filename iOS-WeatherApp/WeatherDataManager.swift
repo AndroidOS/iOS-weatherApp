@@ -8,18 +8,18 @@
 import Foundation
 
 
-protocol  BitcoinDataManagerDelegate {
-    func didUpdateBitcoin(prices: [String: Double])
+protocol  WeatherDataManagerDelegate {
+    func didUpdateWeather(prices: [String: Double])
 }
 
-struct BitcoinDataManager {
+struct WeatherDataManager {
     
-    let bitcoinURL = "https://api.coindesk.com/v1/bpi/historical/close.json"
-    var delegate: BitcoinDataManagerDelegate?
+    let weatherURL = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID="
+    var delegate: WeatherDataManagerDelegate?
     
     func fetchBitcoinData(){
        
-        performRequest(urlString: bitcoinURL)
+        performRequest(urlString: weatherURL)
     }
     
     
@@ -36,7 +36,7 @@ struct BitcoinDataManager {
                 }
                 
                 if let safeData = data {
-                    self.parseJSON(bitcoinData: safeData)
+                    self.parseJSON(weatherData: safeData)
                 }
             }
             
@@ -46,14 +46,14 @@ struct BitcoinDataManager {
         
     }
     
-    func parseJSON(bitcoinData: Data){
+    func parseJSON(weatherData: Data){
         
         do {
-            if let json = try JSONSerialization.jsonObject(with: bitcoinData, options: []) as? [String: Any] {
+            if let json = try JSONSerialization.jsonObject(with: weatherData, options: []) as? [String: Any] {
                 // try to read out a string array
                 if let values = json["bpi"] as? [String: Double] {
                     
-                    self.delegate?.didUpdateBitcoin(prices: values)
+                    self.delegate?.didUpdateWeather(prices: values)
                 }
             }
         } catch let error as NSError {
