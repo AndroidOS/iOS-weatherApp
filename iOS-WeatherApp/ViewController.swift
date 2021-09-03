@@ -7,11 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WeatherDataManagerDelegate {
+    func didUpdateWeather(prices: [String : Double]) {
+        <#code#>
+    }
+    
+    
+    var dataManager = WeatherDataManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        dataManager.delegate = self
+        dataManager.fetchWeatherData()
     }
 
 

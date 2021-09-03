@@ -14,10 +14,10 @@ protocol  WeatherDataManagerDelegate {
 
 struct WeatherDataManager {
     
-    let weatherURL = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID="
+    let weatherURL = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=" + key
     var delegate: WeatherDataManagerDelegate?
     
-    func fetchBitcoinData(){
+    func fetchWeatherData(){
        
         performRequest(urlString: weatherURL)
     }
