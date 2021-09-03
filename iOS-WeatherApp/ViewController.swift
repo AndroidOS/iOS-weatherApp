@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, WeatherDataManagerDelegate {
     func didUpdateWeather(prices: [String : Double]) {
-        <#code#>
+        
     }
     
     

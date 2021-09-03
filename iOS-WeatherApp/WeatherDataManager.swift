@@ -14,11 +14,12 @@ protocol  WeatherDataManagerDelegate {
 
 struct WeatherDataManager {
     
-    let weatherURL = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=" + key
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=" + key
+   
     var delegate: WeatherDataManagerDelegate?
     
     func fetchWeatherData(){
-       
+       print(weatherURL)
         performRequest(urlString: weatherURL)
     }
     
@@ -36,7 +37,8 @@ struct WeatherDataManager {
                 }
                 
                 if let safeData = data {
-                    self.parseJSON(weatherData: safeData)
+                    print(safeData.base64EncodedString())
+                    //self.parseJSON(weatherData: safeData)
                 }
             }
             
