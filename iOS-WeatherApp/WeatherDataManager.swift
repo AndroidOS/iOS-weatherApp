@@ -14,7 +14,7 @@ protocol  WeatherDataManagerDelegate {
 
 struct WeatherDataManager {
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=" + key
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=Sydney,au&APPID=" + key
    
     var delegate: WeatherDataManagerDelegate?
     
@@ -37,7 +37,8 @@ struct WeatherDataManager {
                 }
                 
                 if let safeData = data {
-                    print(safeData.base64EncodedString())
+                    let str = String(decoding:safeData, as: UTF8.self)
+                    print(str)
                     //self.parseJSON(weatherData: safeData)
                 }
             }
