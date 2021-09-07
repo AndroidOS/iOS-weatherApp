@@ -7,59 +7,59 @@
 
 import Foundation
 
-//public class Coord{
-//    public double lon;
-//    public double lat;
+struct Coord{
+    var lon = 0.0
+    var lat = 0.0
+}
+
+struct Weather{
+    var id = 0
+    var main = ""
+    var description = ""
+    var            icon = ""
+}
+
+struct Main{
+    var temp = 0.0
+    var feels_like = 0.0
+    var temp_min = 0.0
+    var temp_max = 0.0
+    var pressure = 0
+    var humidity = 0
+}
+
+//struct Wind{
+//    var double speed;
+//    var int deg;
+//    var double gust;
 //}
 //
-//public class Weather{
-//    public int id;
-//    public String main;
-//    public String description;
-//    public String icon;
+//struct Clouds{
+//    varint all;
 //}
 //
-//public class Main{
-//    public double temp;
-//    public double feels_like;
-//    public double temp_min;
-//    public double temp_max;
-//    public int pressure;
-//    public int humidity;
+//struct Sys{
+//    varint type;
+//    varint id;
+//    varString country;
+//    varint sunrise;
+//    varint sunset;
 //}
 //
-//public class Wind{
-//    public double speed;
-//    public int deg;
-//    public double gust;
-//}
-//
-//public class Clouds{
-//    public int all;
-//}
-//
-//public class Sys{
-//    public int type;
-//    public int id;
-//    public String country;
-//    public int sunrise;
-//    public int sunset;
-//}
-//
-//public class Root{
-//    public Coord coord;
-//    public List<Weather> weather;
-//    public String base;
-//    public Main main;
-//    public int visibility;
-//    public Wind wind;
-//    public Clouds clouds;
-//    public int dt;
-//    public Sys sys;
-//    public int timezone;
-//    public int id;
-//    public String name;
-//    public int cod;
+//struct Root{
+//    varCoord coord;
+//    varList<Weather> weather;
+//    varString base;
+//    varMain main;
+//    varint visibility;
+//    varWind wind;
+//    varClouds clouds;
+//    varint dt;
+//    varSys sys;
+//    varint timezone;
+//    varint id;
+//    varString name;
+//    varint cod;
 //}
 //
 //

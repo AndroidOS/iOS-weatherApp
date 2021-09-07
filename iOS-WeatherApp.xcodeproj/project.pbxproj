@@ -107,10 +107,9 @@
 		BE73AC7A26DE2FDE001F9048 /* iOS-WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				BEA1643C26E7527B00F4A030 /* view */,
 				BE73AC7B26DE2FDE001F9048 /* AppDelegate.swift */,
 				BE73AC7D26DE2FDE001F9048 /* SceneDelegate.swift */,
-				BE73AC7F26DE2FDE001F9048 /* ViewController.swift */,
-				BE73AC8126DE2FDE001F9048 /* Main.storyboard */,
 				BE73AC8726DE2FEB001F9048 /* Assets.xcassets */,
 				BE73AC8926DE2FEB001F9048 /* LaunchScreen.storyboard */,
 				BE73AC8C26DE2FEB001F9048 /* Info.plist */,
@@ -138,6 +137,15 @@
 				BE73ACA226DE2FEC001F9048 /* Info.plist */,
 			);
 			path = "iOS-WeatherAppUITests";
+			sourceTree = "<group>";
+		};
+		BEA1643C26E7527B00F4A030 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BE73AC8126DE2FDE001F9048 /* Main.storyboard */,
+				BE73AC7F26DE2FDE001F9048 /* ViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
