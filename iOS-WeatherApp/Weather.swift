@@ -28,12 +28,12 @@ struct Main{
     var humidity = 0
 }
 
-//struct Wind{
-//    var double speed;
-//    var int deg;
-//    var double gust;
-//}
-//
+struct Wind{
+    var speed = 0.0
+    var deg = 0
+    var gust = 0.0
+}
+
 //struct Clouds{
 //    varint all;
 //}
@@ -61,5 +61,5 @@ struct Main{
 //    varString name;
 //    varint cod;
 //}
-//
-//
+
+
