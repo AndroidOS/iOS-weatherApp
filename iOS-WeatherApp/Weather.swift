@@ -34,20 +34,20 @@ struct Wind{
     var gust = 0.0
 }
 
-//struct Clouds{
-//    varint all;
-//}
-//
-//struct Sys{
-//    varint type;
-//    varint id;
-//    varString country;
-//    varint sunrise;
-//    varint sunset;
-//}
-//
-//struct Root{
-//    varCoord coord;
+struct Clouds{
+    var all: Int
+}
+
+struct Sys{
+    var type: Int
+    var id: Int
+    var country: String
+    var sunrise: Int
+    var sunset: Int
+}
+
+struct Root{
+    var coord: Coord
 //    varList<Weather> weather;
 //    varString base;
 //    varMain main;
@@ -60,6 +60,6 @@ struct Wind{
 //    varint id;
 //    varString name;
 //    varint cod;
-//}
+}
 
 
