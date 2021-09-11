@@ -48,18 +48,18 @@ struct Sys{
 
 struct Root{
     var coord: Coord
-//    varList<Weather> weather;
-//    varString base;
-//    varMain main;
-//    varint visibility;
-//    varWind wind;
-//    varClouds clouds;
-//    varint dt;
-//    varSys sys;
-//    varint timezone;
-//    varint id;
-//    varString name;
-//    varint cod;
+//    var List<Weather> weather;
+//    var String base;
+//    var Main main;
+//    var int visibility;
+//    var Wind wind;
+//    var Clouds clouds;
+//    var int dt;
+//    var Sys sys;
+//    var int timezone;
+//    var id:Int
+//    var name:String
+//    var cod:Int
 }
 
 

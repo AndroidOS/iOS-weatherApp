@@ -19,7 +19,7 @@ struct WeatherDataManager {
     var delegate: WeatherDataManagerDelegate?
     
     func fetchWeatherData(){
-       print(weatherURL)
+       //print(weatherURL)
         performRequest(urlString: weatherURL)
     }
     
@@ -38,8 +38,8 @@ struct WeatherDataManager {
                 
                 if let safeData = data {
                     let str = String(decoding:safeData, as: UTF8.self)
-                    print(str)
-                    //self.parseJSON(weatherData: safeData)
+                    //print(str)
+                    self.parseJSON(weatherData: safeData)
                 }
             }
             
@@ -54,9 +54,10 @@ struct WeatherDataManager {
         do {
             if let json = try JSONSerialization.jsonObject(with: weatherData, options: []) as? [String: Any] {
                 // try to read out a string array
-                if let values = json["bpi"] as? [String: Double] {
-                    
-                    self.delegate?.didUpdateWeather(prices: values)
+                //print(json)
+                if let values = json["coord"] as? [String: Any] {
+                    print(values)
+                    //self.delegate?.didUpdateWeather(prices: values)
                 }
             }
         } catch let error as NSError {
