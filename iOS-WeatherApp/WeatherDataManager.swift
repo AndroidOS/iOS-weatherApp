@@ -56,13 +56,18 @@ struct WeatherDataManager {
                 // try to read out a string array
                 //print(json)
                 if let values = json["coord"] as? [String: Any] {
-                    //print(values)
+                    print(values)
                     //self.delegate?.didUpdateWeather(prices: values)
                 }
                 
                 if let icon = json["weather"] as? [Any] {
                     print(icon)
                     
+                
+                    if let main = json["sys"] as? [Any] {
+                        print(main)
+                    }
+                        
                     //self.delegate?.didUpdateWeather(prices: values)
                 }
             }
