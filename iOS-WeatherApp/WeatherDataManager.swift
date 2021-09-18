@@ -63,10 +63,18 @@ struct WeatherDataManager {
                 if let icon = json["weather"] as? [Any] {
                     print(icon)
                     
+                    let icon1 = "\(icon)"
+                    
                 
-                    if let main = json["sys"] as? [Any] {
-                        print(main)
-                    }
+                    let strings = icon1.components(separatedBy: ";")
+                    var desc = strings[1]
+                    let start = desc.index(desc.startIndex, offsetBy: 12)
+                    let desc1 = desc[start...]
+                    
+                    
+                    print(desc1)
+                    
+                    
                         
                     //self.delegate?.didUpdateWeather(prices: values)
                 }
