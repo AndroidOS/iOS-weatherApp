@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol  WeatherDataManagerDelegate {
-    func didUpdateWeather(prices: [String: Double])
+    func didUpdateWeather(icon: String)
 }
 
 struct WeatherDataManager {
@@ -32,13 +32,13 @@ struct WeatherDataManager {
             
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    print(error!)
+                    //print(error!)
                     return
                 }
                 
                 if let safeData = data {
                     let str = String(decoding:safeData, as: UTF8.self)
-                    print(str)
+                    //print(str)
                     self.parseJSON(weatherData: safeData)
                 }
             }
@@ -56,27 +56,27 @@ struct WeatherDataManager {
                 // try to read out a string array
                 //print(json)
                 if let values = json["coord"] as? [String: Any] {
-                    print(values)
+                    //print(values)
                     //self.delegate?.didUpdateWeather(prices: values)
                 }
                 
                 if let icon = json["weather"] as? [Any] {
-                    print(icon)
+                    //print(icon)
                     
                     let icon1 = "\(icon)"
                     
                 
                     let strings = icon1.components(separatedBy: ";")
-                    var desc = strings[1]
+                    let desc = strings[1]
                     let start = desc.index(desc.startIndex, offsetBy: 12)
                     let desc1 = desc[start...]
                     
                     
-                    print(desc1)
+                    //print(desc1)
                     
                     
                         
-                    //self.delegate?.didUpdateWeather(prices: values)
+                    self.delegate?.didUpdateWeather(icon: String(desc1))
                 }
             }
         } catch let error as NSError {

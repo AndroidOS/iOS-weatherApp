@@ -8,14 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController, WeatherDataManagerDelegate {
+    func didUpdateWeather(icon: String) {
+        print(icon)
+    }
+    
     
     
     @IBOutlet weak var imageView: UIImageView!
-    
-    func didUpdateWeather(prices: [String : Double]) {
-        
-    }
-    
     
     var dataManager = WeatherDataManager()
 
