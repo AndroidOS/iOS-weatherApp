@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController, WeatherDataManagerDelegate {
     func didUpdateWeather(icon: String) {
-        print(icon)
+        
+        let url = "https://openweathermap.org/img/wn/\(icon)@2x.png"
+        print(url)
     }
     
     
