@@ -12,6 +12,17 @@ class ViewController: UIViewController, WeatherDataManagerDelegate {
         
         let url = "https://openweathermap.org/img/wn/\(icon)@2x.png"
         print(url)
+        
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: URL(string: url)!) {
+                       if let image = UIImage(data: data) {
+                           DispatchQueue.main.async {
+                            //self?.imageView.se = image
+                            self!.imageView.image = image
+                           }
+                       }
+                   }
+               }
     }
     
     
