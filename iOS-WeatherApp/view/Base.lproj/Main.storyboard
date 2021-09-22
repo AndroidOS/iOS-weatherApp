@@ -16,18 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="q6E-Zy-3ND">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="q6E-Zy-3ND">
                                 <rect key="frame" x="87" y="56" width="240" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="q6E-Zy-3ND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="L0B-qe-Xte"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q6E-Zy-3ND" secondAttribute="trailing" constant="87" id="Php-Js-DuF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q6E-Zy-3ND" secondAttribute="bottom" constant="598" id="ygR-cG-TRT"/>
-                            <constraint firstItem="q6E-Zy-3ND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="ymc-eg-qHU"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="q6E-Zy-3ND" id="FDw-Q9-svV"/>
