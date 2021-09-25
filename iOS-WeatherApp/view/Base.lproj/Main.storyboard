@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="q6E-Zy-3ND">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="q6E-Zy-3ND">
                                 <rect key="frame" x="87" y="56" width="240" height="208"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="0su-CE-Xo6"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaA-JN-JJe">
                                 <rect key="frame" x="20" y="410" width="374" height="34"/>
@@ -29,11 +32,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oaA-JN-JJe" firstAttribute="centerX" secondItem="q6E-Zy-3ND" secondAttribute="centerX" id="368-XQ-6vb"/>
-                            <constraint firstItem="oaA-JN-JJe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YA9-h5-Ebj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oaA-JN-JJe" secondAttribute="bottom" constant="418" id="fn6-Tp-4Vg"/>
-                            <constraint firstItem="oaA-JN-JJe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iTl-pb-r0y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oaA-JN-JJe" secondAttribute="bottom" constant="418" id="jon-o4-oUb"/>
+                            <constraint firstItem="q6E-Zy-3ND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="5cJ-q0-tr0"/>
+                            <constraint firstItem="oaA-JN-JJe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8mU-PJ-7vK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oaA-JN-JJe" secondAttribute="bottom" constant="418" id="P5f-jA-9fe"/>
+                            <constraint firstItem="q6E-Zy-3ND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="TcI-fE-wyD"/>
+                            <constraint firstItem="q6E-Zy-3ND" firstAttribute="centerX" secondItem="oaA-JN-JJe" secondAttribute="centerX" id="TkT-93-fti"/>
+                            <constraint firstItem="oaA-JN-JJe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZFK-eB-Uvs"/>
                         </constraints>
                     </view>
                     <connections>
