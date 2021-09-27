@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController, WeatherDataManagerDelegate {
-    func didUpdateWeather(icon: String) {
-        
+    func didUpdateWeather(icon: String, temp: Double) {
+        print(temp)
         let url = "https://openweathermap.org/img/wn/\(icon)@2x.png"
         print(url)
         
