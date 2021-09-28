@@ -42,6 +42,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="q6E-Zy-3ND" id="FDw-Q9-svV"/>
+                        <outlet property="txtTemp" destination="oaA-JN-JJe" id="V6e-8p-dum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
