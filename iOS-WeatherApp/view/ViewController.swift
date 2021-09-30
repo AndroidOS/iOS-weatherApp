@@ -16,14 +16,14 @@ class ViewController: UIViewController, WeatherDataManagerDelegate {
         print(temp)
         let url = "https://openweathermap.org/img/wn/\(icon)@2x.png"
         print(url)
-        
+        let temp1 = round(temp)
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: URL(string: url)!) {
                        if let image = UIImage(data: data) {
                            DispatchQueue.main.async {
                             //self?.imageView.se = image
                             self!.imageView.image = image
-                            self?.txtTemp.text = " \(temp)"
+                            self?.txtTemp.text = " \(temp1)"
                            }
                        }
                    }
