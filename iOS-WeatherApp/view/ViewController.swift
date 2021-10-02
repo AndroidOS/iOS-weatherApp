@@ -23,7 +23,7 @@ class ViewController: UIViewController, WeatherDataManagerDelegate {
                            DispatchQueue.main.async {
                             //self?.imageView.se = image
                             self!.imageView.image = image
-                            self?.txtTemp.text = " \(temp1)"
+                            self?.txtTemp.text = " \(temp1) Degrees Celcius"
                            }
                        }
                    }
