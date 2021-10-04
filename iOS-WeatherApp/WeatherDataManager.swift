@@ -38,7 +38,7 @@ struct WeatherDataManager {
                 
                 if let safeData = data {
                     let str = String(decoding:safeData, as: UTF8.self)
-                    //print(str)
+                    print(str)
                     self.parseJSON(weatherData: safeData)
                 }
             }
@@ -64,15 +64,16 @@ struct WeatherDataManager {
                 
                 if let temp = json["main"] as? [String: Any] {
                     let t1 = temp["temp_max"] as! Double
+                    let bara = temp["pressure"] as! Int
                     let t2 = t1 - 273.15
                     temp1  = t2
                     print(273.15 - t1)
-                    print(t1)
+                    print(bara)
                     //self.delegate?.didUpdateWeather(prices: values)
                 }
                 
                 if let icon = json["weather"] as? [Any] {
-                    //print(icon)
+                    print(icon)
                     
                     let icon1 = "\(icon)"
                     
