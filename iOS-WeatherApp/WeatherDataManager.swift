@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol  WeatherDataManagerDelegate {
-    func didUpdateWeather(icon: String, temp: Double)
+    func didUpdateWeather(icon: String, temp: Double, bara: Int)
 }
 
 struct WeatherDataManager {
@@ -54,6 +54,8 @@ struct WeatherDataManager {
         
         do {
             var temp1:Double? = nil
+            var bara1:Int? = nil
+            
             if let json = try JSONSerialization.jsonObject(with: weatherData, options: []) as? [String: Any] {
                 // try to read out a string array
                 //print(json)
@@ -64,11 +66,11 @@ struct WeatherDataManager {
                 
                 if let temp = json["main"] as? [String: Any] {
                     let t1 = temp["temp_max"] as! Double
-                    let bara = temp["pressure"] as! Int
+                    bara1 = temp["pressure"] as! Int
                     let t2 = t1 - 273.15
                     temp1  = t2
                     print(273.15 - t1)
-                    print(bara)
+                    print(bara1)
                     //self.delegate?.didUpdateWeather(prices: values)
                 }
                 
@@ -88,7 +90,7 @@ struct WeatherDataManager {
                     
                     
                         
-                    self.delegate?.didUpdateWeather(icon: String(desc1), temp: temp1!)
+                    self.delegate?.didUpdateWeather(icon: String(desc1), temp: temp1!, bara: bara1!)
                 }
             }
         } catch let error as NSError {
