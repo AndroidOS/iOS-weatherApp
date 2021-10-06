@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, WeatherDataManagerDelegate {
     
     
+    @IBOutlet weak var txtBaram: UITextField!
     @IBOutlet weak var txtTemp: UITextField!
     
     func didUpdateWeather(icon: String, temp: Double, bara: Int) {

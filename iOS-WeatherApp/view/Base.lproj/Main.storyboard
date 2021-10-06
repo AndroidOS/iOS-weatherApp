@@ -29,20 +29,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-AP-V3w">
+                                <rect key="frame" x="20" y="549" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="q6E-Zy-3ND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="5cJ-q0-tr0"/>
                             <constraint firstItem="oaA-JN-JJe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8mU-PJ-7vK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KhX-AP-V3w" secondAttribute="trailing" constant="20" id="MSp-qc-il8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oaA-JN-JJe" secondAttribute="bottom" constant="418" id="P5f-jA-9fe"/>
                             <constraint firstItem="q6E-Zy-3ND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="TcI-fE-wyD"/>
                             <constraint firstItem="q6E-Zy-3ND" firstAttribute="centerX" secondItem="oaA-JN-JJe" secondAttribute="centerX" id="TkT-93-fti"/>
                             <constraint firstItem="oaA-JN-JJe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZFK-eB-Uvs"/>
+                            <constraint firstItem="KhX-AP-V3w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="505" id="qbn-MG-vfZ"/>
+                            <constraint firstItem="KhX-AP-V3w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yOV-Kl-TAX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="q6E-Zy-3ND" id="FDw-Q9-svV"/>
+                        <outlet property="txtBaram" destination="KhX-AP-V3w" id="PVw-nm-Ko8"/>
                         <outlet property="txtTemp" destination="oaA-JN-JJe" id="V6e-8p-dum"/>
                     </connections>
                 </viewController>
