@@ -55,6 +55,8 @@ struct WeatherDataManager {
         do {
             var temp1:Double? = nil
             var bara1:Int? = nil
+            var wind:Double? = nil
+            var info:[String:Any]? = nil
             
             if let json = try JSONSerialization.jsonObject(with: weatherData, options: []) as? [String: Any] {
                 // try to read out a string array
@@ -66,6 +68,7 @@ struct WeatherDataManager {
                 
                 if let temp = json["main"] as? [String: Any] {
                     let t1 = temp["temp_max"] as! Double
+                    info = temp
                     bara1 = temp["pressure"] as! Int
                     let t2 = t1 - 273.15
                     temp1  = t2
@@ -86,7 +89,8 @@ struct WeatherDataManager {
                     let desc1 = desc[start...]
                     
                     
-                    //print(desc1)
+                   // print("Wind = \(info?["wind"])")
+                    print(wind)
                     
                     
                         
