@@ -55,7 +55,7 @@ struct WeatherDataManager {
         do {
             var temp1:Double? = nil
             var bara1:Int? = nil
-            var wind:Double? = nil
+            var wind:Int? = nil
             var info:[String:Any]? = nil
             
             if let json = try JSONSerialization.jsonObject(with: weatherData, options: []) as? [String: Any] {
@@ -75,6 +75,11 @@ struct WeatherDataManager {
                     print(273.15 - t1)
                     print(bara1)
                     //self.delegate?.didUpdateWeather(prices: values)
+                    
+                    if let wind1 = json["wind"] as? [String:Any] {
+                        wind = wind1["deg"] as! Int
+                    print("Wind \(wind)")
+                    }
                 }
                 
                 if let icon = json["weather"] as? [Any] {
@@ -90,7 +95,7 @@ struct WeatherDataManager {
                     
                     
                    // print("Wind = \(info?["wind"])")
-                    print(wind)
+                    
                     
                     
                         
