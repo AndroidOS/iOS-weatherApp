@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol  WeatherDataManagerDelegate {
-    func didUpdateWeather(icon: String, temp: Double, bara: Int)
+    func didUpdateWeather(icon: String, temp: Double, bara: Int, wind: Int)
 }
 
 struct WeatherDataManager {
@@ -99,7 +99,7 @@ struct WeatherDataManager {
                     
                     
                         
-                    self.delegate?.didUpdateWeather(icon: String(desc1), temp: temp1!, bara: bara1!)
+                    self.delegate?.didUpdateWeather(icon: String(desc1), temp: temp1!, bara: bara1!, wind: wind ?? 0 )
                 }
             }
         } catch let error as NSError {

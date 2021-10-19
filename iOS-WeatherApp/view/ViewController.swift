@@ -15,7 +15,7 @@ class ViewController: UIViewController, WeatherDataManagerDelegate {
     
     @IBOutlet weak var txtWind: UITextField!
     
-    func didUpdateWeather(icon: String, temp: Double, bara: Int) {
+    func didUpdateWeather(icon: String, temp: Double, bara: Int, wind: Int) {
         print(temp)
         let url = "https://openweathermap.org/img/wn/\(icon)@2x.png"
         print(url)
