@@ -28,6 +28,7 @@ class ViewController: UIViewController, WeatherDataManagerDelegate {
                             self!.imageView.image = image
                             self?.txtTemp.text = " \(temp1) Degrees Celcius"
                             self?.txtBaram.text = "\(bara) Baramoteric Pressure"
+                            self?.txtWind.text = "Wind Degrees \(wind)"
                            }
                        }
                    }
